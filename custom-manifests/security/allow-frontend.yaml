@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-frontend
+  namespace: divesh-boutique
+spec:
+  podSelector:
+    matchLabels:
+      app: frontend
+
+  ingress:
+  - {}
+
+  policyTypes:
+  - Ingress
